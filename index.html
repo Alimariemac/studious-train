@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <!-- build:css css/main.css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--endbuild-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet"> 
+    
+    <title>Alicia MacCara</title>
+</head>
+    <body>
+            <div class="front-container">
+                <div class="row">
+                    <div class="col col-12">
+                        <h1>Alicia MacCara</h1>
+                        <h1>Designer</h1>
+                        <p>Creating interfaces and experiences to delight and help users people. Download Resume.</p>
+                    </div>
+                </div>
+            
+        <section id ="scroll-section" style="overflow: scroll hidden;" data-scrollbar>
+            <div class="wrapper">
+                <div style="background-image: url('images/main-image.jpg');"></div>
+                <div style="background-image: url('images/image2.png');"></div>
+            </div>
+        
+            </div>
+        </section>
+            
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="dist/smooth-scrollbar.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            var elem = $("#scroll-section");
+            console.log(elem);
+            var scrollbar = Scrollbar.init(elem,
+                {
+                    speed: 0.7,
+                    damping:0.04
+                });
+        </script>
+    </body>
+  </html>

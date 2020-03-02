@@ -1,0 +1,39 @@
+{
+  "name": "staticsite",
+  "version": "1.0.0",
+  "description": "main webpage",
+  "main": "index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "jquery-mousewheel": "^3.1.13",
+    "lite-server": "^2.5.4",
+    "popper.js": "^1.16.1",
+    "smooth-scrollbar": "^8.5.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.0.0",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^4.12.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.1",
+    "rimraf": "^2.6.2",
+    "usemin-cli": "^0.5.1"
+  },
+  "scripts": {
+    "start": "npm run watch:all",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "clean": "rimraf dist",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin project.html -d dist --htmlmin -o dist/project.html",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+  },
+  "author": "alicia maccara",
+  "license": "ISC"
+}

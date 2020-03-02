@@ -1,0 +1,88 @@
+.custom-container{
+    overflow:hidden;
+    }
+.front-container{
+    max-height: 100vh;
+    height: 100vh;
+    overflow:hidden;
+}
+.large-img{
+    height:10rem;
+    width: 100%;
+}
+.logo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.logo .a{
+    fill:#3017fa;
+}
+.logo .b{
+    fill:#ffeaea;
+}
+.normal-container{
+    padding: 4rem;
+}
+.pill{
+    padding-left: 16px;
+    padding-right:16px;
+    padding-top:4px;
+    padding-bottom: 4px;
+    margin: 4px;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+}
+.scroll-hidden{
+    overflow-y: hidden;
+    overflow-x:scroll;
+}
+.section{
+    padding: 1.5rem;
+}
+.showcase{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+}
+.small-img{
+    height:5rem;
+    width: 100%;
+    padding:0px !important;
+}
+.spacer{
+    margin-bottom: 1rem;
+}
+.top-img,.large-img, .small-img{
+    object-fit: cover;
+}
+.top-img{
+    height:10rem;
+    width: 100vw;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: auto;
+    object-fit: cover;
+}
+
+.wrapper > div {
+    pointer-events: none;
+    flex: 0 0 auto;
+    width: 90%;
+    height: 100vh;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    
+}
