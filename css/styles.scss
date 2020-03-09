@@ -42,39 +42,6 @@ body{
     color: $body-color;
     font-size: $body-size;
 }
-.box{
-    position: relative;
-    display: inline-block; 
-    object-fit: cover;
-    background-size: cover;
-}
-
-.box .overlay{
-    position: absolute;
-    z-index: 998;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%; /* Set the width of the positioned div */
-    height: 100%;
-    background-color: rgba($main-color, .65);
-}
-
-
-
-.box .text{
-        position: absolute;
-        z-index: 999;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 45%; /* Adjust this value to move the positioned div up and down */
-        text-align: center;
-        width: 60%; /* Set the width of the positioned div */
-        color:$white-color;
-        font-weight: $h-weight;
-        text-transform: uppercase;
-}
-  
 .footer{
     height: 8vh ;
     background-color: $pill-color;
@@ -141,14 +108,15 @@ i.fab{
 }
 
 
-
 .logo-container{
     height:7vh;
     padding-top:5px;
 }
 
-.absolute{
-    position: absolute;
+.fixed{
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .logo .a{
@@ -200,7 +168,7 @@ i.fab{
     padding:0px !important;
 }
 .spacer{
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 .top-container{
     height: 35vh;
@@ -270,6 +238,11 @@ ul{
         height: 28vh;
 
     }
+    .logo{
+        height: 50px;
+        width: 50px;
+    }
+ 
     .logo-container{
         height:7vh;
         padding-top:10px;

@@ -5,7 +5,7 @@
     <!-- Required meta tags always come first -->
     <meta charset="utf-8" />
     <!-- build:css css/main.css -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -34,31 +34,18 @@
             
         <section id ="scroll-section" style="overflow: scroll hidden;" data-scrollbar>
             <div class="wrapper">
-            <div class="box" style="background-image: url('images/main-image.jpg');">
-                <div class="overlay"></div>
-                <div class ="text">Project Name</div>
+            <a href="geofences1.html">
+                <div style="background-image: url(images/geofence.jpg); background-position: center center;">
+            </a>
             </div>
-            <div class="box" style="background-image: url('images/main-image.jpg');">
-                <div class="overlay"></div>
-                <div class ="text">Project Name 2</div>
+            <a href="jager2.html"><div style="background-image: url(images/jager-phone.jpg); background-position: center center;"></a> 
             </div>
-            <div class="box" style="background-image: url('images/main-image.jpg');">
-                <div class="overlay"></div>
-                <div class ="text">Project Name 3</div>
+            <a href="batch3.html"><div style="background-image: url(images/project1.jpg); background-position: center center;"></a>
             </div>
-            <div class="box" style="background-image: url('images/main-image.jpg');">
-                <div class="overlay"></div>
-                <div class ="text">Project Name 4</div>
-            </div>
-            <div class="box" style="background-image: url('images/main-image.jpg');">
-                <div class="overlay"></div>
-                <div class ="text">Project Name 5</div>
-            </div>
-            <div class="box" style="background-image: url('images/main-image.jpg');">
-                <div class="overlay"></div>
-                <div class ="text">Project Name 2 6</div>
+            <a href="queerly-health4.html"><div style="background-image: url(images/project1.jpg); background-position: center center;"></a>
             </div>
             
+           
             </div>
         </section>
         <div class = "d-flex flex-row arrows padding justify-content-between align-items-center">
@@ -81,13 +68,6 @@
         <script src="dist/smooth-scrollbar.js"></script>
         <script src="js/scripts.js"></script>
         <script>
-            var elem = $("#scroll-section");
-            console.log(elem);
-            var scrollbar = Scrollbar.init(elem,
-                {
-                    speed: 0.7,
-                    damping:0.04
-                });
         </script>
     </body>
   </html>
