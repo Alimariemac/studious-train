@@ -118,7 +118,9 @@ i.fab{
     top: 0;
     z-index: 10;
 }
-
+.front-img{
+    max-width: 100%;
+}
 .logo .a{
     fill:$main-color;
 }
@@ -198,7 +200,6 @@ ul{
 }
 
 .wrapper > div {
-    pointer-events: none;
     flex: 0 0 auto;
     width: 80%;
     height: 100%;
@@ -208,6 +209,10 @@ ul{
     align-items: center;
     background-size: cover;   
 }
+
+
+
+
 
 @media (min-width: 576px){
     html{
