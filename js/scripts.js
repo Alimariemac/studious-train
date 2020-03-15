@@ -1,14 +1,14 @@
   (function() {
 
-        var item = document.querySelector('#scroll-section');
-        window.addEventListener('wheel', function(e){
-            if (e.deltaY > 0) {
-                item.scrollLeft += 100;
-            }
-
-            else {
-                item.scrollLeft -= 100;
-            }
-        });
         
+        let modal = $("#my-modal");
+        let image = $(".f-img");
+        
+        image.click(function(){
+            let imageSource = $(this).attr("src"); 
+            console.log(imageSource);
+            $("#modal-img").attr("src", $(this).attr("src"));
+            $("#my-modal").modal("show");
+           
+        });
     })();
