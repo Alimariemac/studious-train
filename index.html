@@ -27,7 +27,7 @@
                     <div class="col col-12 col-sm-8 col-lg-7">
                         <h1>Alicia MacCara</h1>
                         <h1 style="color: #3017fa;">Designer</h1>
-                        <p>Creating interfaces and experiences to delight and help <span style="text-decoration: line-through;">users</span> people. <span><a href="#">Download Resume.</a></span></p>
+                        <p>Creating interfaces and experiences to delight and help <span style="text-decoration: line-through;">users</span> people. <span><a href="resume.pdf">View Resume.</a></span></p>
                     </div>
                 </div>
             </div>
@@ -48,17 +48,20 @@
             </div>
         </section>
         <div class = "d-flex flex-row arrows padding justify-content-between align-items-center">
-            <svg id="left" xmlns="http://www.w3.org/2000/svg" fill="none" height="16" viewBox="0 0 49 16" width="49"><path d="m47.845 7.13953c.5523 0 1 .44771 1 1 0 .55228-.4477 1-1 1zm-46.70714 1.7071c-.39052-.39053-.39052-1.02369 0-1.41421l6.36397-6.36396c.39052-.390529 1.02368-.390529 1.41421 0 .39052.39052.39052 1.02368 0 1.41421l-5.65686 5.65685 5.65686 5.65688c.39052.3905.39052 1.0237 0 1.4142-.39053.3905-1.02369.3905-1.41422 0zm46.70714.2929-46.00003-.00001v-2l46.00003.00001z" fill="#000"/></svg>
-            <svg id ="right" width="49" height="16" viewBox="0 0 49 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span id= "left"><svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16" viewBox="0 0 49 16" width="49"><path d="m47.845 7.13953c.5523 0 1 .44771 1 1 0 .55228-.4477 1-1 1zm-46.70714 1.7071c-.39052-.39053-.39052-1.02369 0-1.41421l6.36397-6.36396c.39052-.390529 1.02368-.390529 1.41421 0 .39052.39052.39052 1.02368 0 1.41421l-5.65686 5.65685 5.65686 5.65688c.39052.3905.39052 1.0237 0 1.4142-.39053.3905-1.02369.3905-1.41422 0zm46.70714.2929-46.00003-.00001v-2l46.00003.00001z" fill="#000"/></svg>
+            </span>
+                <svg id ="right" width="49" height="16" viewBox="0 0 49 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.84497 7.13953C1.29269 7.13953 0.844971 7.58724 0.844971 8.13953C0.844971 8.69181 1.29269 9.13953 1.84497 9.13953L1.84497 7.13953ZM48.5521 8.84663C48.9426 8.4561 48.9426 7.82294 48.5521 7.43242L42.1881 1.06846C41.7976 0.677931 41.1644 0.677931 40.7739 1.06846C40.3834 1.45898 40.3834 2.09214 40.7739 2.48267L46.4308 8.13952L40.7739 13.7964C40.3834 14.1869 40.3834 14.8201 40.7739 15.2106C41.1644 15.6011 41.7976 15.6011 42.1881 15.2106L48.5521 8.84663ZM1.84497 9.13953L47.845 9.13952L47.845 7.13952L1.84497 7.13953L1.84497 9.13953Z" fill="black"/>
                 </svg>
         </div>
         <div class ="footer">
             <div class="custom-container d-flex align-items-center padding">
-                    <a href="#"><i class="fab fa-linkedin-in pr-3"></i></a> 
-                    <a href ="#"><i class="fab fa-instagram pr-3"></i></a>
-                    <a href="#"><i class="fab fa-github-alt"></i></a>
-        </div>
+                    <a href="https://www.linkedin.com/in/aliciamariemaccara/"><i class="fab fa-linkedin-in pr-3"></i></a> 
+                    <a href ="https://www.instagram.com/alimariemac/"><i class="fab fa-instagram pr-3"></i></a>
+                    <a href="https://github.com/Alimariemac"><i class="fab fa-github-alt pr-3"></i></a>
+                    <a href="https://dribbble.com/Alimariemac"><i class="fab fa-dribbble"></i></a>
+
+                </div>
        </div>
             
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -67,17 +70,44 @@
         <script src="dist/smooth-scrollbar.js"></script>
         <script>
               (function scrolling() {
-                let item = document.querySelector('#scroll-section');
+               
                 window.addEventListener('wheel', function(e){
-                    if (e.deltaY > 0) {
-                        item.scrollLeft += 100;
-                    }
-
-                    else {
-                        item.scrollLeft -= 100;
-                    }
+                    scrollWindow(e)
                 });
+                
                 })();
+
+                let item = document.querySelector('#scroll-section');
+
+                function scrollWindow(e){
+                    if (e.deltaY > 0) {    
+                        item.scrollLeft += 20;
+                    }
+                    else {
+                        item.scrollLeft -= 20;
+                    }
+                }
+                 
+                let left = $("#left");
+                let right = $("#right");
+                
+                let howfar = 0
+                let timer;
+                left.mousedown(function(){
+                    timer = setInterval(function(){
+                        item.scrollLeft -= (howfar+4)
+                    })
+                }).mouseup(function(){
+                    clearInterval(timer)
+                })
+                right.mousedown(function(){
+                    timer = setInterval(function(){
+                        item.scrollLeft += (howfar+4)
+                    })
+                }).mouseup(function(){
+                    clearInterval(timer)
+                })
+               
         </script>
     </body>
   </html>
