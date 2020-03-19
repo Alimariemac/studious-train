@@ -29,7 +29,7 @@
     "lite": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass -o css/ css/",
-    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copyfonts": "copyfiles -f node_modules/@fort-awesome/fontawesome-free/webfonts/* dist/fonts",
     "imagemin": "imagemin images/* -o dist/img && imagemin images/batch/* -o dist/images/batch/* && imagemin images/csv/* -o dist/images/csv/* && imagemin images/jager/* -o dist/images/jager/* && imagemin images/queerly/* -o dist/images/queerly/*",
     "clean": "rimraf dist",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin batch3.html -d dist --htmlmin -o dist/batch3.html && usemin geofences1.html -d dist --htmlmin -o dist/geofences1.html && usemin jager2.html -d dist --htmlmin -o dist/jager2.html && usemin queerly-health4.html -d dist --htmlmin -o dist/queerly-health4.html",
