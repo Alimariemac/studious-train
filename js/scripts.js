@@ -1,11 +1,11 @@
   (function() {
 
         
-        let modal = $("#my-modal");
-        let image = $(".f-img");
+        var modal = $("#my-modal");
+        var image = $(".f-img");
         
         image.click(function(){
-            let imageSource = $(this).attr("src"); 
+            var imageSource = $(this).attr("src"); 
             console.log(imageSource);
             $("#modal-img").attr("src", $(this).attr("src"));
             $("#my-modal").modal("show");
@@ -26,7 +26,7 @@
             node.addEventListener('animationend', handleAnimationEnd)
         }
 
-        let win = $(window)
+        var win = $(window)
 
         win.scroll(function(event){
             image.each(function(i,el){
