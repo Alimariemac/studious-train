@@ -19,7 +19,6 @@ $h3-size:1.3rem;
 html{
     font-size: 16px;
     width: 100vw;
-    overflow-x: hidden;
 }
 a{
     color:$main-color;
@@ -38,6 +37,7 @@ a{
     height: 8vh;
     max-width: 1480px;
     margin: auto;
+    cursor: pointer;
     
 }
 body{
@@ -54,9 +54,6 @@ body{
 .footer{
     height: 8vh ;
     background-color: $pill-color;
-}
-
-.front-page{
 }
 
 h1{
@@ -136,6 +133,7 @@ i.fab{
 .fixed{
     position: fixed;
     z-index: 10;
+    top: 10px;
 }
 .front-img{
     max-width: 100%;
@@ -170,18 +168,19 @@ i.fab{
 }
 #scroll-section{
     height: 42vh;   
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
     
-}
+  }
+  ::-webkit-scrollbar {
+    display:none;
+  }
 
 .section{
     padding: 1.5rem;
 }
 
-// .small-img{
-//     height:5rem;
-//     width: 100%;
-//     padding:0px !important;
-// }
 .spacer{
     margin-bottom: 1.5rem;
 }
@@ -232,6 +231,8 @@ ul{
         width: 55%;
     }
 }
+
+
 
 @media (min-width: 992px) { 
     .wrapper > a {

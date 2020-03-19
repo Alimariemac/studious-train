@@ -1,7 +1,6 @@
 html {
   font-size: 16px;
-  width: 100vw;
-  overflow-x: hidden; }
+  width: 100vw; }
 
 a {
   color: #3017fa;
@@ -18,7 +17,8 @@ a {
 .arrows {
   height: 8vh;
   max-width: 1480px;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 body {
   font-family: "Lato",sans-serif;
@@ -95,7 +95,8 @@ i.fab {
 
 .fixed {
   position: fixed;
-  z-index: 10; }
+  z-index: 10;
+  top: 10px; }
 
 .front-img {
   max-width: 100%; }
@@ -129,7 +130,13 @@ i.fab {
   overflow-x: scroll; }
 
 #scroll-section {
-  height: 42vh; }
+  height: 42vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative; }
+
+::-webkit-scrollbar {
+  display: none; }
 
 .section {
   padding: 1.5rem; }
