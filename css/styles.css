@@ -95,8 +95,7 @@ i.fab {
 
 .fixed {
   position: fixed;
-  z-index: 10;
-  top: 10px; }
+  z-index: 10; }
 
 .front-img {
   max-width: 100%; }
