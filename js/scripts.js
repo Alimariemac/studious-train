@@ -2,7 +2,7 @@
 
         
         var modal = $("#my-modal");
-        var image = $(".f-img");
+        var image = $(".imageDiv");
         
         image.click(function(){
             var imageSource = $(this).attr("src"); 
@@ -32,7 +32,7 @@
             image.each(function(i,el){
                 var el = $(el);
                 if($(this).visible(true)){
-                    $(this).addClass("animated slideInUp fadeIn")
+                    $(this.children).addClass("animated fadeInUp")
                 }
             })
         })
