@@ -224,7 +224,7 @@ ul{
 }
 
 
-@media (min-width: 576px){
+@media screen and (min-width: 576px){
     html{
     font-size: 17px;
     }
@@ -235,12 +235,12 @@ ul{
 
 
 
-@media (min-width: 992px) { 
+@media screen and (min-width: 992px) { 
     .wrapper > a {
         width: 35%;
     }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     html{
     font-size: 17px;
     }
