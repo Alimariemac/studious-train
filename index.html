@@ -94,18 +94,18 @@
                 
                 let howfar = 0
                 let timer;
-                left.mousedown(function(){
+                left.bind("touchstart mousedown",function(){
                     timer = setInterval(function(){
                         item.scrollLeft -= (howfar+4)
                     })
-                }).mouseup(function(){
+                }).bind("touchend mouseup",function(){
                     clearInterval(timer)
                 })
-                right.mousedown(function(){
+                right.bind("touchstart mousedown",function(){
                     timer = setInterval(function(){
                         item.scrollLeft += (howfar+4)
                     })
-                }).mouseup(function(){
+                }).bind("touchend mouseup",function(){
                     clearInterval(timer)
                 })
                
