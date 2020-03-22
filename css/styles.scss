@@ -19,8 +19,15 @@ $h3-size:1.3rem;
 
 html{
     font-size: 16px;
-    width: 100vw;
 }
+
+body{
+    font-family: "Lato",sans-serif;
+    color: $body-color;
+    font-size: $body-size;
+    line-height: $body-line-height;
+}
+
 a{
     color:$main-color;
     text-decoration: underline;
@@ -33,28 +40,48 @@ a{
 .align-footer{
     max-width: 1480px;
     margin: auto;
-}
-.arrows{
-    height: 8vh;
-    max-width: 1480px;
-    margin: auto;
-    cursor: pointer;
+    
     
 }
-body{
-    font-family: "Lato",sans-serif;
-    color: $body-color;
-    font-size: $body-size;
-    line-height: $body-line-height;
+.arrows{
+    display: none;
 }
+
 .caption{
     font-size: $small-size;
     color: $pill-text;
     text-align: center;
 }
+
+.custom-container{
+    overflow:hidden;
+    max-width: 1480px;
+    margin: auto;
+    height: 100%;
+    }
+
+.f-img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.fixed{
+    position: fixed;
+    z-index: 15;
+
+}
+
 .footer{
-    height: 8vh ;
     background-color: $pill-color;
+   height: 4rem;
+}
+
+.front-img{
+    max-width: 100%;
+}
+
+.front-page{
+    overflow-x: hidden;
 }
 
 h1{
@@ -82,22 +109,10 @@ i.fab{
     line-height: 1;
     color: $main-color;
 }
-.custom-container{
-    overflow:hidden;
-    max-width: 1480px;
-    margin: auto;
-    height: 100%;
-    }
-
-.f-img{
-    width: 100%;
-    cursor: pointer;
-}
-
 
 .logo{
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     text-align: right;
     .logo-back{
         display: none;
@@ -116,10 +131,17 @@ i.fab{
     }
 }
 
+.logo .a{
+    fill:$main-color;
+}
+
+.logo .b{
+    fill:$white-color;
+}
 
 .logo-container{
-    height:7vh;
-    padding-top:5px;
+    padding-top:15px;
+    height:100%;
 }
 #modal-img{
     max-width: 100%;
@@ -131,25 +153,12 @@ i.fab{
     min-width: 60%;
 }
 
-.fixed{
-    position: fixed;
-    z-index: 10;
-}
-.front-img{
-    max-width: 100%;
-}
-.logo .a{
-    fill:$main-color;
-}
-.logo .b{
-    fill:$white-color;
-}
 .normal-container{
     padding: 4rem;
 }
 .padding{
-    padding-left: 1.5rem;
-    padding-right:1.5rem;
+    padding-left: 2rem;
+    padding-right:2rem;
 }
 .pill{
     padding-left: 16px;
@@ -162,20 +171,28 @@ i.fab{
     font-size: $small-size;
     color:$pill-text;
 }
-.scroll-hidden{
-    overflow-y: hidden;
-    overflow-x:scroll;
-}
-#scroll-section{
-    height: 42vh;   
+
+#scroll-section{ 
     scrollbar-width: none;
     -ms-overflow-style: none;
-    position: relative;
+    overflow: hidden;
     
+
   }
-  ::-webkit-scrollbar {
-    display:none;
-  }
+
+  #scroll-section > a {
+    flex: 0 0 auto;
+    // width: 80%;
+    // height: 100%;
+    height: 400px;
+    width: 80%;
+    margin-left: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;   
+    margin-bottom: 1rem;
+}
 
 .section{
     padding: 1.5rem;
@@ -185,7 +202,7 @@ i.fab{
     margin-bottom: 1.5rem;
 }
 .top-container{
-    height: 35vh;
+    padding-top: 3rem;
     
 }
 .top-img, .slide-img{
@@ -200,38 +217,54 @@ ul{
     list-style-type: none;
     padding: 0;
 }
-.wrapper{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    width: auto;
-    height: 100%;
-    object-fit: cover;
-    
-}
-
-.wrapper > a {
-    flex: 0 0 auto;
-    width: 80%;
-    height: 100%;
-    margin-left: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;   
-}
 
 
 @media screen and (min-width: 576px){
     html{
     font-size: 17px;
+    width: 100vw;
     }
+
+    .arrows{
+        height: 8vh;
+        max-width: 1480px;
+        margin: auto;
+        cursor: pointer;  
+        padding-top: 1rem;
+        display: flex;
+    }
+
+    .footer{
+        height: 8vh ;
+    }
+
+    .logo-container{
+        height:7vh;
+    }
+
+    .padding{
+        padding-left: 5.5rem;
+        padding-right:5.5rem;
+    }
+
+    #scroll-section{
+        height: 42vh;   
+        margin-bottom: 0;      
+      }
+
+    #scroll-section > a{
+        max-width: 600px;
+      }
+
+    .top-container{
+        height: 35vh;    
+    }
+
     .wrapper > a {
         width: 55%;
-    }
-}
+    } 
 
+}
 
 
 @media screen and (min-width: 992px) { 
@@ -239,39 +272,33 @@ ul{
         width: 35%;
     }
 }
-@media screen and (min-width: 768px) {
-    html{
-    font-size: 17px;
-    }
-    .top-img{
-        height:30rem;
-    }
-    // .small-img{
-    //     height:30rem;
-    // }
-    .padding{
-        padding-left: 5.5rem;
-        padding-right:5.5rem;
-    }
-    
-    .top-container{
-        height: 28vh;
 
+@media screen and (min-width: 768px) {
+    .arrows{
+        height: 10vh;
     }
+
     .logo{
-        height: 40px;
-        width: 40px;
+        height: 45px;
+        width: 45px;
     }
- 
+
     .logo-container{
         height:7vh;
         padding-top:10px;
         margin-right: 10px;
     }
-    .arrows{
-        height:10vh;
-    }
+
     #scroll-section{
         height:47vh;
+    }
+
+    .top-img{
+        height:30rem;
+    }
+    
+    .top-container{
+        height: 28vh;
+
     }
 }
