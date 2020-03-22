@@ -172,6 +172,8 @@ ul {
     display: flex; }
   .footer {
     height: 8vh; }
+  .logo {
+    height: 100%; }
   .logo-container {
     height: 14vh; }
   .padding {
@@ -194,9 +196,6 @@ ul {
 @media screen and (min-width: 768px) {
   .arrows {
     height: 10vh; }
-  .logo {
-    height: 45px;
-    width: 45px; }
   .logo-container {
     height: 7vh;
     padding-top: 10px;
