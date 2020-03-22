@@ -176,17 +176,17 @@ ul {
   align-items: center;
   background-size: cover; }
 
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   html {
     font-size: 17px; }
   .wrapper > a {
     width: 55%; } }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .wrapper > a {
     width: 35%; } }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 17px; }
   .top-img {
@@ -197,8 +197,8 @@ ul {
   .top-container {
     height: 28vh; }
   .logo {
-    height: 45px;
-    width: 45px; }
+    height: 40px;
+    width: 40px; }
   .logo-container {
     height: 7vh;
     padding-top: 10px;
