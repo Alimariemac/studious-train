@@ -161,8 +161,7 @@ ul {
 
 @media screen and (min-width: 576px) {
   html {
-    font-size: 17px;
-    width: 100vw; }
+    font-size: 17px; }
   .arrows {
     height: 8vh;
     max-width: 1480px;

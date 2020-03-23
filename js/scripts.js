@@ -2,9 +2,10 @@
 
         
         var modal = $("#my-modal");
+        var img = $(".f-img")
         var image = $(".imageDiv");
         
-        image.click(function(){
+        img.click(function(){
             var imageSource = $(this).attr("src"); 
             console.log(imageSource);
             $("#modal-img").attr("src", $(this).attr("src"));
