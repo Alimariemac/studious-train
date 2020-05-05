@@ -4,8 +4,18 @@ html {
 body {
   font-family: "Lato",sans-serif;
   color: #070d22;
-  font-size: 1.1rem;
+  font-size: 20px;
   line-height: 1.7; }
+
+button
+.card {
+  height: 300px; }
+
+.card-img {
+  transition: all .35s ease-in-out; }
+
+.card-img:hover {
+  transform: scale(1.02); }
 
 a {
   color: #3017fa;
@@ -23,7 +33,7 @@ a {
   display: none; }
 
 .caption {
-  font-size: 0.8rem;
+  font-size: 18px;
   color: #656567;
   text-align: center; }
 
@@ -46,26 +56,26 @@ a {
   height: 4rem; }
 
 .front-img {
-  max-width: 100%; }
+  object-fit: scale-down; }
 
-.front-page {
-  overflow-x: hidden; }
+.front-text {
+  font-size: 18px; }
 
 h1 {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 45px;
   line-height: 0.9; }
 
 h2 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 40px;
   color: #3017fa; }
 
 h3 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 1.3rem; }
+  font-size: 35px; }
 
 i.fas,
 i.fab {
@@ -99,6 +109,16 @@ i.fab {
 #modal-img {
   max-width: 100%; }
 
+.masonry {
+  column-count: 4;
+  column-gap: 1em; }
+
+.item {
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%; }
+
 .modal-body {
   padding: 0px; }
 
@@ -120,7 +140,7 @@ i.fab {
   margin: 4px;
   background-color: #F2F2F2;
   border-radius: 16px;
-  font-size: 0.8rem;
+  font-size: 18px;
   color: #656567; }
 
 #scroll-section {
@@ -143,7 +163,7 @@ i.fab {
   padding: 1.5rem; }
 
 .spacer {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2.5rem; }
 
 .top-container {
   padding-top: 3rem; }
@@ -162,29 +182,11 @@ ul {
 @media screen and (min-width: 576px) {
   html {
     font-size: 17px; }
-  .arrows {
-    height: 8vh;
-    max-width: 1480px;
-    margin: auto;
-    cursor: pointer;
-    padding-top: 1rem;
-    display: flex; }
-  .footer {
-    height: 8vh; }
-  .logo {
-    height: 100%; }
-  .logo-container {
-    height: 14vh; }
   .padding {
     padding-left: 5.5rem;
     padding-right: 5.5rem; }
-  #scroll-section {
-    height: 42vh;
-    margin-bottom: 0; }
   #scroll-section > a {
     max-width: 600px; }
-  .top-container {
-    height: 38vh; }
   .wrapper > a {
     width: 55%; } }
 
@@ -193,13 +195,5 @@ ul {
     width: 35%; } }
 
 @media screen and (min-width: 768px) {
-  .arrows {
-    height: 10vh; }
-  .logo-container {
-    height: 7vh; }
-  #scroll-section {
-    height: 47vh; }
   .top-img {
-    height: 30rem; }
-  .top-container {
-    height: 28vh; } }
+    height: 30rem; } }

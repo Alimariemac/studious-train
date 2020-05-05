@@ -10,12 +10,19 @@ $font-family:"Lato",sans-serif;
 
 $h-weight:700;
 $body-weight:300;
-$h1-size:2.5rem;
-$h2-size:2rem;
-$body-size:1.1rem;
+$h1-size:45px;
+$h2-size:40px;
+$body-size:20px;
 $body-line-height:1.7;
-$small-size:0.8rem;
-$h3-size:1.3rem;
+$small-size:18px;
+$h3-size:35px;
+
+
+// @keyframes move{
+//     from {top:0px}
+//     to {top:-25px; position: relative;}
+//   }
+  
 
 html{
     font-size: 16px;
@@ -27,7 +34,16 @@ body{
     font-size: $body-size;
     line-height: $body-line-height;
 }
+button
+.card{
+    height: 300px;
+}
+.card-img
+    { transition: all .35s ease-in-out; }
 
+.card-img:hover{
+   transform: scale(1.02);
+}
 a{
     color:$main-color;
     text-decoration: underline;
@@ -77,11 +93,11 @@ a{
 }
 
 .front-img{
-    max-width: 100%;
+    object-fit: scale-down;
 }
 
-.front-page{
-    overflow-x: hidden;
+.front-text {
+    font-size: $small-size;
 }
 
 h1{
@@ -146,6 +162,17 @@ i.fab{
 #modal-img{
     max-width: 100%;
 }
+.masonry { 
+    column-count: 4;
+    column-gap: 1em;
+  }
+  
+  .item { 
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+  }
 .modal-body{
     padding: 0px;
 }
@@ -199,7 +226,7 @@ i.fab{
 }
 
 .spacer{
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 .top-container{
     padding-top: 3rem;
@@ -225,44 +252,16 @@ ul{
     
     }
 
-    .arrows{
-        height: 8vh;
-        max-width: 1480px;
-        margin: auto;
-        cursor: pointer;  
-        padding-top: 1rem;
-        display: flex;
-    }
-
-    .footer{
-        height: 8vh ;
-    }
-    .logo{
-        height: 100%;
-    }
-
-    .logo-container{
-        height:14vh;
-    }
-
 
     .padding{
         padding-left: 5.5rem;
         padding-right:5.5rem;
     }
 
-    #scroll-section{
-        height: 42vh;   
-        margin-bottom: 0;      
-      }
 
     #scroll-section > a{
         max-width: 600px;
       }
-
-    .top-container{
-        height: 38vh;    
-    }
 
     .wrapper > a {
         width: 55%;
@@ -278,24 +277,8 @@ ul{
 }
 
 @media screen and (min-width: 768px) {
-    .arrows{
-        height: 10vh;
-    }
-
-    .logo-container{
-        height:7vh;
-    }
-
-    #scroll-section{
-        height:47vh;
-    }
-
     .top-img{
         height:30rem;
     }
     
-    .top-container{
-        height: 28vh;
-
-    }
 }
