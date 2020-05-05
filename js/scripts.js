@@ -33,7 +33,7 @@
             image.each(function(i,el){
                 var el = $(el);
                 if($(this).visible(true)){
-                    $(this.children).addClass("animated fadeInUp")
+                    $(this.children).addClass("animated fadeIn")
                 }
             })
         })
